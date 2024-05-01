@@ -25,7 +25,6 @@ struct Good
     int v, w;
 };
 
-
 int main()
 {
     vector<Good> goods;
