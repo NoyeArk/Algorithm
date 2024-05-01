@@ -2,7 +2,7 @@
  * @file Trie字符串统计.cpp
  * @author horiki
  * @version 0.1
- * @date 2024-04-25
+ * @date 2024-04-25 04-30
  * @copyright Copyright (c) 2024
  * 
  * @brief 
@@ -54,5 +54,6 @@ int main()
         if (op == "I") insert(str);
         else cout << query(str) << endl;
     }
+    
     return 0;
 }
