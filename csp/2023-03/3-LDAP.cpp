@@ -95,10 +95,10 @@ int main()
             int k, v; cin >> k >> v;
             alls.push_back(k);
             query.push_back({k, v, dn});
-            // h[k][v].push_back(dn);
         }
     }
 
+    // 离散化
     sort(alls.begin(), alls.end());
     alls.erase(unique(alls.begin(), alls.end()), alls.end());
 
