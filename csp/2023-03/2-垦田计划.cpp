@@ -12,72 +12,41 @@
  *  3.一直循环，直到手中的资源不够继续投入
  *  
  *  ·如何选出耗时最长的任务？使用优先队列，默认按第一个元素排序
+ *  正解：使用二分法，直接二分答案，O(nlogn)
  */
 
 #include <iostream>
-#include <vector>
-#include <queue>
 using namespace std;
 
-struct Task
-{
-    int t, c;
-    Task(int t, int c)
-    {
-        this->t = t;
-        this->c = c;
-    }
-};
-
-struct cmp
-{
-    bool operator () (const Task &a, const Task &b)		  
-	{
-		return a.t < b.t;	
-	}
-};
-
 const int N = 100010;
-int t[N], c[N];
 int n, m, k;
+int t[N], c[N];
 
-priority_queue<Task, vector<Task>, cmp> q;
-
-int schedule()
+bool check(int mid)
 {
-    int tmp = 0;  // 标识t到达k的个数
-    while (q.size())
+    // 最少需要mid天
+    int res = m;
+    for (int i = 1; i <= n; i ++)
     {
-        auto task = q.top(); q.pop();
-        // printf("--%d %d %d--\n", task.t, task.c, task.cnt);
-        if (task.t == k) 
-        {
-            if (++ tmp == n) return task.t;
-            q.push(task);
-            continue;
-        }
-
-        m -= task.c;
-
-        if (m < 0) return task.t;
-        task.t --;
-        q.push(task);
-        
-        // cout << m << " " << tmp << endl;
+        if (t[i] <= mid) continue;
+        res -= (t[i] - mid) * c[i];
+        if (res < 0) return false;
     }
-    return -1;
+    return true;
 }
 
 int main()
 {
     cin >> n >> m >> k;
-    
-    for (int i = 1; i <= n; i ++)
+    for (int i = 1; i <= n; i ++) cin >> t[i] >> c[i];
+
+    int l = 1, r = 100000;
+    while (l < r)
     {
-        int t, c; cin >> t >> c;
-        q.push(Task(t, c));
+        int mid = l + r >> 1;
+        if (check(mid)) r = mid;
+        else l = mid + 1;
     }
-    
-    cout << schedule();
+    cout << l;
     return 0;
 }
