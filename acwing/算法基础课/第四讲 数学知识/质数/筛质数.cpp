@@ -11,7 +11,7 @@
  *          pj一定是i的最小质因子，pj一定是pj*i的最小质因子
  *      2. i % primes[j] == 0:
  *          pj一定小于i的所有质因子，pj也一定是pj*i的最小质因子
- */W
+ */
 
 #include <iostream>
 using namespace std;
