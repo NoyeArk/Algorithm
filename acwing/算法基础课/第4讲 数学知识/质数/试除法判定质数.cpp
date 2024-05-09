@@ -1,8 +1,8 @@
 /**
  * @file 试除法判定质数.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-04-25
+ * @version 0.2
+ * @date 2024-04-25 2024-05-09
  * @copyright Copyright (c) 2024
  * 
  * @brief 
