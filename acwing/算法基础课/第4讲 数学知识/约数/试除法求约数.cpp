@@ -1,14 +1,15 @@
 /**
  * @file 试除法求约数.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-04-30
+ * @version 0.2
+ * @date 2024-04-30 2024-05-11
  * @copyright Copyright (c) 2024
  * 
  * @brief 
  *  试除法求一个数的所有约数：
  *      从小到达枚举所有约数，只枚举小的那一个
  *      时间复杂度：O(nlogn)
+ *  这个和求质数都是遍历 i <= n / i，但是这个不需要 n /= i，分解质因数需要
  */
 
 #include <iostream>
@@ -19,7 +20,6 @@ using namespace std;
 vector<int> get_divisors(int n)
 {
     vector<int> res;
-
     for (int i = 1; i <= n / i; i ++)
         if (n % i == 0)
         {

@@ -1,8 +1,8 @@
 /**
  * @file 有向图的拓扑序列.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-04-30
+ * @version 0.2
+ * @date 2024-04-30 2024-05-11
  * @copyright Copyright (c) 2024
  * 
  * @brief 
@@ -29,8 +29,7 @@ bool top_sort()
         for (int i = h[t]; i != -1; i = ne[i])
         {
             int j = e[i];
-            d[j] --;
-            if (d[j] == 0) q[++ tt] = j;
+            if (-- d[j] == 0) q[++ tt] = j;
         }
     }
     return tt == n - 1;
