@@ -6,8 +6,10 @@
  * @copyright Copyright (c) 2024
  * 
  * @brief 
+ *  https://www.acwing.com/file_system/file/content/whole/index/content/10768123/
  *  如何实现对角线遍历？
- *      
+ *      每个对角线的行列下标的和是不变的，同时从左上角到右下角每个对角线的和都在不断增大
+ *      同时设置一个方向变量，用于表示当前这个对角线的遍历方向
  */
 
 #include <iostream>
@@ -23,7 +25,7 @@ double tmp[10][10];
 double q[10][10], m[10][10];
 double scan[N];
 
-void print_m()
+void print_ans()
 {
     for (int i = 0; i < 8; i ++)
     {
@@ -69,9 +71,6 @@ void mult()
 
 void decode()
 {
-    fill();
-    mult();
-
     // 对矩阵M进行离散余弦逆变换
     memcpy(tmp, m, sizeof m);
     for (int i = 0; i < 8; i ++)
@@ -95,7 +94,6 @@ void decode()
             m[i][j] = max(m[i][j], 0.0);
             m[i][j] = min(m[i][j], 255.0);
         }
-    print_m();
 }
 
 int main()
@@ -108,15 +106,19 @@ int main()
     if (t == 0)
     {
         fill();
-        print_m();
     }
     else if (t == 1)
     {
         fill();
         mult();
-        print_m();
     }
-    else decode();
+    else 
+    {
+        fill();
+        mult();
+        decode();
+    }
+    print_ans();
 
     return 0;
 }
