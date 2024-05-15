@@ -32,9 +32,8 @@ int main()
     {
         int res = judge(i, str[i]);
         ans += str[i];
-        if (res != 0) {
+        if (res != 0) 
             ans += to_string(res + 1);
-        }
         i += res + 1;
     }
 

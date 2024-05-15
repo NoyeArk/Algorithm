@@ -64,10 +64,6 @@ int main()
     sort(have.begin(), have.end());
     have.erase(unique(have.begin(), have.end()), have.end());
     
-    for (auto c : have)
-        printf("%c ", c);
-    cout << endl;
-
     dijkstra();
     
     int ans = 1e9; char t;
@@ -75,7 +71,6 @@ int main()
         if (c == 'Z') continue;
         else 
         {
-            cout << dist[h[c]] << " " << c << endl;
             if (ans > dist[h[c]]) 
                 ans = dist[h[c]], t = c;
         }
