@@ -23,6 +23,7 @@
 4. 重复步骤1~3，直到排序完成。代码见[冒泡排序.cpp](冒泡排序.cpp)
 
 **动图演示**
+
 ![alt text](https://ask.qcloudimg.com/http-save/yehe-1654613/4iifndesx2.gif)
 
 
@@ -44,7 +45,8 @@
 5. 将另一序列剩下的所有元素直接复制到合并序列尾。代码见[归并排序.cpp](归并排序.cpp)
 
 
-**动图演示**=
+**动图演示**
+
 ![alt text](https://ask.qcloudimg.com/http-save/yehe-1654613/xyrh3ni4ji.gif)
 
 
@@ -61,4 +63,5 @@
 3. 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序；代码见[快速排序.cpp](快速排序.cpp)
 
 **动图演示**
+
 ![alt text](https://ask.qcloudimg.com/http-save/yehe-1654613/uysmsku31g.gif)
