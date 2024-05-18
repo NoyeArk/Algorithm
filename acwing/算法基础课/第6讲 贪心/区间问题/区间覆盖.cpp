@@ -31,15 +31,28 @@ int main()
 
     sort(q + 1, q + 1 + n);
 
-    int max_r = -2e9, ans = 0;
-    for (int i = 1; i <= n; i ++)
-    {
-        if (s < q[i].second) 
-        {
-            ans ++;
-            max_r = q[i].second;
-        }
-    }
+	int res = 0;
+	bool success = false;
+	for (int i = 1; i <= n; i ++)
+	{
+		int j = i, r = -2e9;
+		while (j <= n && q[j].first <= s)
+		{
+			r = max(r, q[j].second);
+			j ++;
+		}
+		if (r < s) 
+			break;
+		res ++;
+		if (r >= t) 
+		{
+			success = true;
+			break;
+		}
+		s = r;
+		i = j - 1;
+	}
 
+	cout << (success ? res : -1);
     return 0;
 }
