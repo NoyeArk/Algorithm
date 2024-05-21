@@ -24,7 +24,8 @@ int main()
         for (int j = 1; j <= m; j ++)
         {
             f[i][j] = f[i - 1][j];  // 不选第i件物品
-            if (j >= v[i]) f[i][j] = max(f[i][j], f[i - 1][j - v[i]] + w[i]);
+            if (j >= v[i]) 
+				f[i][j] = max(f[i][j], f[i - 1][j - v[i]] + w[i]);
         }
     cout << f[n][m];
     return 0;

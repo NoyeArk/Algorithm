@@ -1,8 +1,8 @@
 /**
  * @file 求组合数II.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-05-20
+ * @version 0.2 
+ * @date 2024-05-20 2024-05-21
  * @copyright Copyright (c) 2024
  * 
  * @brief 
@@ -24,7 +24,7 @@ int qmi(int a, int k, int p)
 	int res = 1;
 	while (k)
 	{
-		if (k & 1) res = (LL)a * res % p;
+		if (k & 1) res = (LL)res * a % mod;
 		k >>= 1;
 		a = (LL)a * a % mod;
 	}
@@ -42,7 +42,7 @@ void init()
 }
 
 int main()
-{
+{	
 	init();
 	int n; cin >> n;
 	while (n --)
