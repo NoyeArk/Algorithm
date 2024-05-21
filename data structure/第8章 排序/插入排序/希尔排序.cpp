@@ -1,8 +1,8 @@
 /**
- * @file 插入排序.cpp
+ * @file 希尔排序.cpp
  * @author horiki
- * @version 0.2
- * @date 2024-05-19 2024-05-21
+ * @version 0.1
+ * @date 2024-05-21
  * @copyright Copyright (c) 2024
  * 
  * @brief 
@@ -16,14 +16,11 @@ const int N = 100010;
 int n;
 int a[N];
 
-void insert_sort()
+void shell_sort()
 {
-	for (int i = 2; i <= n; i ++)
+	for (int gap = n / 2; gap; gap /= 2)
 	{
-		int val = a[i], j;
-		for (j = i; j > 1 && val < a[j - 1]; j --)
-			a[j] = a[j - 1];
-		a[j] = val;
+		for (int i = gap + 1; gap <= n; i ++)
 	}
 }
 
@@ -32,7 +29,7 @@ int main()
 	cin >> n;
 	for (int i = 1; i <= n; i ++) cin >> a[i];
 
-	insert_sort();
+	shell_sort();
 
 	for (int i = 1; i <= n; i ++) cout << a[i] << " ";
 	return 0;
