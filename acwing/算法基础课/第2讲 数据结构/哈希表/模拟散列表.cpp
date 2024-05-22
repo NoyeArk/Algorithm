@@ -2,8 +2,8 @@
  * @file 模拟散列表.cpp
  * @author horiki
  * @brief 
- * @version 0.1
- * @date 2024-05-08
+ * @version 0.2
+ * @date 2024-05-08 2024-05-22
  * 
  * @copyright Copyright (c) 2024
  * 
@@ -18,16 +18,16 @@ int h[N], e[N], ne[N], idx;
 
 void insert(int x)
 {
-    int k = (x % N + N) % N;
-    e[idx] = x, ne[idx] = h[k], h[k] = idx ++;
+	int k = (x % N + N) % N;
+	e[idx] = x, ne[idx] = h[k], h[k] = idx ++;
 }
 
 bool find(int x)
 {
-    int k = (x % N + N) % N;
-    for (int i = h[k]; i != -1; i = ne[i])
-        if (e[i] == x) return true;
-    return false;
+	int k = (x % N + N) % N;
+	for (int i = h[k]; i != -1; i = ne[i])
+		if (e[i] == x) return true;
+	return false;
 }
 
 int main()
