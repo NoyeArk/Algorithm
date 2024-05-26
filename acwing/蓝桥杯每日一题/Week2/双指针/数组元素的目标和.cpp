@@ -21,12 +21,10 @@ int main()
 	for (int i = 1; i <= n; i ++) cin >> a[i];
 	for (int j = 1; j <= m; j ++) cin >> b[j];
 
-	int i = 1, j = 0;
-	while (i <= n && j <= m)
+	int i = 1, j = m;
+	while (i <= n && j >= 1)
 	{
-		while (a[i] + b[j + 1] <= x) j ++;
-		// cout << i << " " << j << endl;
-		// exit(0);
+		while (a[i] + b[j] > x) j --;
 		while (a[i] + b[j] < x) i ++;
 		if (a[i] + b[j] == x) break;
 	}
