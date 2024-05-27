@@ -11,9 +11,10 @@
 
 #include <iostream>
 #include <cmath>
+#include <unordered_map>
 using namespace std;
 
-const int N = 100010;
+const int N = 1000010;
 int cnt = 1;
 struct Mirror
 {
@@ -26,8 +27,12 @@ struct Mirror
 const int dx[] = {1, 0, -1, 0};
 const int dy[] = {0, 1, 0, -1};
 
-void insert_mirror()
+unordered_map<int, int> h;
+
+void insert_mirror(int i)
 {
+	h[i] = cnt;
+
 	int x1, y1, x2, y2; 
 	double a; cin >> x1 >> y1 >> x2 >> y2 >> a;
 	m[cnt].x1 = x1, m[cnt].x2 = x2, m[cnt].y1 = y1, m[cnt].y2 = y2;
@@ -40,19 +45,26 @@ void insert_mirror()
 void remove()
 {
 	int k; cin >> k;
-	m[k].is_use = false;
+	m[h[k]].is_use = false;
 }
 
 // 判断点(x, y)是否有镜子
-double update(int x, int y, int d, double I)
+void update(int x, int y, int& d, double& I)
 {
 	for (int i = 1; i <= cnt; i ++)
 	{
 		if (!m[i].is_use) continue;
-		if ((m[i].y1 - y) * (m[i].x1 - x) == (m[i].y2 - y) * (m[i].x2 - x))
+		if ((x == m[i].x1 && y == m[i].y1) || (x == m[i].x2 && y == m[i].y2))
+			continue;
+
+		if ((m[i].y1 - y) * (m[i].x2 - x) == (m[i].y2 - y) * (m[i].x1 - x))
 		{
+			if (y > max(m[i].y1, m[i].y2) || y < min(m[i].y1, m[i].y2))
+				continue;
+			if (x > max(m[i].x1, m[i].x2) || x < min(m[i].x1, m[i].x2))
+				continue;
 			// 进行反射 改变方向
-			if (m[i].k > 0)
+			if (m[i].k < 0)
 			{
 				if (d == 0) d = 3;
 				else if (d == 1) d = 2;
@@ -71,29 +83,36 @@ double update(int x, int y, int d, double I)
 			break;
 		}
 	}
-	return I;
+	
 }
 
 void insert_laser()
 {
 	int x, y, d, t;
 	double I; cin >> x >> y >> d >> I >> t;
+	int a = x, b = y, cnt = 1;
 	for (int i = 1; i <= t; i ++)
 	{
 		x += dx[d], y += dy[d];
-		I = update(x, y, d, I);
+		update(x, y, d, I);
+// 		if (a == -716 && b == -381 && cnt % 100 == 0)
+// 		{
+// 			printf("x:%d y:%d I:%.2lf d:%d\n", x, y, I, d);
+// 		}
+		cnt ++;
 		if (I < 1) break;
 	}
-	cout << x << " " << y << " " << floor(I) << endl;
+	if (I < 1) printf("0 0 0\n");
+	else cout << x << " " << y << " " << floor(I) << endl;
 }
 
 int main()
 {
 	int m; cin >> m;
-	while (m --)
+	for (int i = 1; i <= m; i ++)
 	{
 		int op; cin >> op;
-		if (op == 1) insert_mirror();
+		if (op == 1) insert_mirror(i);
 		else if (op == 2) remove();
 		else insert_laser();
 	}
