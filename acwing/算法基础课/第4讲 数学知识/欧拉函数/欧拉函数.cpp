@@ -1,14 +1,17 @@
 /**
  * @file 欧拉函数.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-05-10
+ * @version 0.2
+ * @date 2024-05-10 2024-05-30
  * 
  * @copyright Copyright (c) 2024
  * @brief 
  *  欧拉函数：1~n中与n互质的数的个数
  *  需要先分解质因数
- *  容质原理：
+ * 
+ * 	2024-05-30：
+ * 	f(n) = n * (1 - 1 / p1) * (1 - 1 / p2) * ... * (1 - 1 / ps)
+ * 	在分解质因数的过程中求解
  */
 
 #include <iostream>
