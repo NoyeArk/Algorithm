@@ -20,9 +20,9 @@ int main()
 		int a; cin >> a;
 		for (int i = 2; i <= a / i; i ++)
 		{
-			int cnt = 0;
 			if (a % i == 0)
 			{
+				int cnt = 0;
 				while (a % i == 0)
 					cnt ++, a /= i;
 				cout << i << " " << cnt << endl;
