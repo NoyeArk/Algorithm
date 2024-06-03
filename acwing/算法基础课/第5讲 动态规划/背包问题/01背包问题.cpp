@@ -1,8 +1,8 @@
 /**
  * @file 01背包问题.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-05-01
+ * @version 0.2
+ * @date 2024-05-01 2024-06-03
  * @copyright Copyright (c) 2024
  * 
  * @brief 
