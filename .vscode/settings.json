@@ -93,5 +93,8 @@
         "stdfloat": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp"
+    },
+	"[markdown]":  {
+        "editor.quickSuggestions": true
     }
 }
