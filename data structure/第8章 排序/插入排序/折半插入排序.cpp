@@ -25,17 +25,18 @@ void halfway_insert_sort()
 	for (int i = 2; i <= n; i ++)
 	{
 		int val = a[i];
-		// 二分查找到第一个大于val的数的位置
-		int l = 1, r = i - 1;
-		while (l <= r)
+		// 需要找到第一个大于a[i]的数的位置
+		int l = 1, r = i;
+		while (l < r)
 		{
-		    int mid = l + r >> 1;
-		    if (a[mid] > val) r = mid - 1;
-		    else l = mid + 1;
+			int mid = l + r >> 1;
+			if (a[mid] <= val) l = mid + 1;
+			else r = mid;
 		}
-		for (int j = i - 1; j > r; j --)
-		    a[j + 1] = a[j];
-		a[r + 1] = val;
+		// 将[r, i - 1]之间的数移动到[r + 1, i]
+		for (int j = i; j > r; j --)
+			a[j] = a[j - 1];
+		a[r] = val;
 	}
 }
 
