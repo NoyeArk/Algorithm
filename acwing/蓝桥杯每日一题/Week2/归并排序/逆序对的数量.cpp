@@ -1,8 +1,8 @@
 /**
  * @file 逆序对的数量.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-05-25
+ * @version 0.2
+ * @date 2024-05-25 2024-06-07
  * @copyright Copyright (c) 2024
  * 
  * @brief 
@@ -10,7 +10,6 @@
  * 		1.两个元素都在左边
  * 		2.两个元素都在右边
  * 		3.两个元素一左一右
- * 
  */
 
 #include <iostream>
