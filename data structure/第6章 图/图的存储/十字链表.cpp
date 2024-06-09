@@ -113,6 +113,7 @@ void GetOLVexDu() {			//获得十字链表中某一个点的入度和出度
 		cout << endl;
 	}
 }
+
 int main()
 {
 	CreateOLGraph();
