@@ -25,14 +25,14 @@ int A[N], B[N];
 bool check1(int mid)
 {
 	for (int i = 1; i <= n; i ++)
-		if (B[i] * mid < A[i]) return false;
+		if (A[i] / mid > B[i]) return false;
 	return true;
 }
 
 bool check2(int mid)
 {
 	for (int i = 1; i <= n; i ++)
-		if (B[i] * mid > A[i]) return false;
+		if (A[i] / mid < B[i]) return false;
 	return true;
 }
 
