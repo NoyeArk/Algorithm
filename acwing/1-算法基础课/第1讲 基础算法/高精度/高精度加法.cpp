@@ -1,8 +1,8 @@
 /**
  * @file 高精度加法.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-04-29
+ * @version 0.2
+ * @date 2024-04-29 2024-06-22
  * @copyright Copyright (c) 2024
  * 
  * @brief 
@@ -34,3 +34,4 @@ int main()
     for (int i = C.size() - 1; i >= 0; i --) cout << C[i];
     return 0;
 }
+
