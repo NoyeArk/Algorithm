@@ -18,7 +18,7 @@ using namespace std;
 
 typedef long long LL;
 
-const int N = 5010;
+const int N = 5001;
 int g[N][N], col[N][N];
 
 int main()
@@ -30,40 +30,41 @@ int main()
 		g[x + 1][y + 1] = w;
 	}
 
-	for (int i = 1; i <= n; i ++)
-		for (int j = 1; j <= n; j ++)
+	for (int i = 1; i <= N; i ++)
+		for (int j = 1; j <= N; j ++)
 			g[i][j] += g[i][j - 1], col[i][j] = col[i - 1][j] + g[i][j];
 
-	for (int i = 1; i <= n; i ++)
-	{
-		for (int j = 1; j <= n; j ++)
-			cout << g[i][j] << " ";
-		cout << endl;
-	}
+	// for (int i = 1; i <= n; i ++)
+	// {
+	// 	for (int j = 1; j <= n; j ++)
+	// 		cout << g[i][j] << " ";
+	// 	cout << endl;
+	// }
 
-	for (int i = 1; i <= n; i ++)
-	{
-		for (int j = 1; j <= n; j ++)
-			cout << col[i][j] << " ";
-		cout << endl;
-	}
+	// for (int i = 1; i <= n; i ++)
+	// {
+	// 	for (int j = 1; j <= n; j ++)
+	// 		cout << col[i][j] << " ";
+	// 	cout << endl;
+	// }
 
 	int ans = 0;
 
 	if (R >= 5000) 
 	{
-		for (int i = 1; i <= n; i ++)
+		for (int i = 1; i <= N; i ++)
 			ans += g[i][n];
 		cout << ans;
 		return 0;
 	}
 
-	for (int i = 1; i <= n - R + 1; i ++)
-		for (int j = 1; j <= n - R + 1; j ++)
+	for (int i = 1; i <= N - R + 1; i ++)
+		for (int j = 1; j <= N - R + 1; j ++)
 		{
 			if (R == 1) 
 			{
-				ans = max(ans, )
+				ans = max(ans, g[i][j] - g[i][j - 1]);
+				continue;
 			}
 			int x1 = i, x2 = i + R - 1, y1 = j, y2 = j + R - 1;
 
