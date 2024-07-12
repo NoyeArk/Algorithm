@@ -1,20 +1,18 @@
 /**
  * @file 129. 火车进栈.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-07-10
+ * @version 0.2
+ * @date 2024-07-10 2024-07-12
  * @copyright Copyright (c) 2024
  * 
  * @brief 
- * 	对于每一个火车，在它要进站的时候，可以进行2种操作：
- * 		1.火车站中已有的火车出站，当前
- * 		2.当前火车进站
+ * 	对于每一个火车j，在它要进站的时候，如果火车站中已有num个火车，可以进行一下操作：
+ * 	对于任意的0<=i<=num，火车j可以在前i个火车出站后进入
  */
 
 #include <iostream>
 #include <vector>
 #include <stack>
-#include <algorithm>
 using namespace std;
 
 int n;
@@ -33,18 +31,17 @@ void dfs(int u, stack<int> stk)
 		}
 		return ;
 	}
-	for (int i = 0; i <= stk.size(); i ++)
+	int m = stk.size();
+	// 先把栈中的元素全部弹出
+	for (int i = 1; i <= m; i ++)
+		path.push_back(stk.top()), stk.pop();
+	for (int i = 0; i <= m; i ++)
 	{
-		if (i)
-		{
-			// 弹出栈顶
-			int t = stk.top(); stk.pop();
-			path.push_back(t);
-		}
-		stack<int> k(stk);
-		k.push(u);
-		dfs(u + 1, k);
-		if (i) path.pop_back();
+		if (i) stk.push(path.back()), path.pop_back();
+		stk.push(u);
+		dfs(u + 1, stk);
+		stk.pop();
+		if (ans.size() >= 20) return ;
 	}
 }
 
@@ -52,10 +49,9 @@ int main()
 {
 	cin >> n;
 	dfs(1, stack<int>());
-	sort(ans.begin(), ans.end());
-	for (auto& nums : ans)
+	for (int i = 0; i < ans.size(); i ++)
 	{
-		for (auto& x : nums) cout << x;
+		for (auto& x : ans[i]) cout << x;
 		cout << endl;
 	}
 	return 0;
