@@ -1,8 +1,8 @@
 /**
  * @file 99. 激光炸弹.cpp
  * @author horiki
- * @version 0.1
- * @date 2024-06-22
+ * @version 0.2
+ * @date 2024-06-22 2024-07-19
  * @copyright Copyright (c) 2024
  * 
  * @brief 
@@ -10,66 +10,30 @@
  */
 
 #include <iostream>
-#include <vector>
-#include <cstring>
-#include <utility>
-#include <algorithm>
 using namespace std;
 
-typedef long long LL;
-
-const int N = 5001;
-int g[N][N], col[N][N];
+const int N = 5001, M = 5010;
+int g[M][M];
 
 int main()
 {
 	int n, R; cin >> n >> R;
-	for (int i = 1; i <= n; i ++)
+	while (n --)
 	{
 		int x, y, w; cin >> x >> y >> w;
-		g[x + 1][y + 1] = w;
+		g[x + 1][y + 1] += w;
 	}
 
 	for (int i = 1; i <= N; i ++)
 		for (int j = 1; j <= N; j ++)
-			g[i][j] += g[i][j - 1], col[i][j] = col[i - 1][j] + g[i][j];
-
-	// for (int i = 1; i <= n; i ++)
-	// {
-	// 	for (int j = 1; j <= n; j ++)
-	// 		cout << g[i][j] << " ";
-	// 	cout << endl;
-	// }
-
-	// for (int i = 1; i <= n; i ++)
-	// {
-	// 	for (int j = 1; j <= n; j ++)
-	// 		cout << col[i][j] << " ";
-	// 	cout << endl;
-	// }
+			g[i][j] += g[i][j - 1] + g[i - 1][j] - g[i - 1][j - 1];
 
 	int ans = 0;
+	R = min(N, R);
 
-	if (R >= 5000) 
-	{
-		for (int i = 1; i <= N; i ++)
-			ans += g[i][n];
-		cout << ans;
-		return 0;
-	}
-
-	for (int i = 1; i <= N - R + 1; i ++)
-		for (int j = 1; j <= N - R + 1; j ++)
-		{
-			if (R == 1) 
-			{
-				ans = max(ans, g[i][j] - g[i][j - 1]);
-				continue;
-			}
-			int x1 = i, x2 = i + R - 1, y1 = j, y2 = j + R - 1;
-
-			ans = max(ans, col[x2][y2] - col[x2][y1] - col[x1][y2] + col[x1][y1]);
-		}
+	for (int i = R; i <= N; i ++)
+		for (int j = R; j <= N; j ++)
+			ans = max(ans, g[i][j] - g[i - R][j] - g[i][j - R] + g[i - R][j - R]);
 
 	cout << ans;
 	return 0;
