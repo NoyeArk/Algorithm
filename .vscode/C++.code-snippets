@@ -12,7 +12,7 @@
 		"body": [
 			"/**",
 			" * @file ${TM_FILENAME}",
-			" * @author horiki",
+			" * @author 弘树",
 			" * @version 0.1",
 			" * @date ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
 			" * @copyright Copyright (c) 2024",
