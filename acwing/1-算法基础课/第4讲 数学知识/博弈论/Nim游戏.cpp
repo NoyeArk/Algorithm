@@ -1,31 +1,29 @@
 /**
  * @file Nim游戏.cpp
- * @author horiki
+ * @author 弘树
  * @version 0.1
- * @date 2024-05-24
+ * @date 2024-07-21
  * @copyright Copyright (c) 2024
  * 
  * @brief 
- * 
+ * 	先手必胜状态：可以走到某一个必败状态
+ * 	先手必败状态：走不到任何一个必败状态
  */
 
 #include <iostream>
 using namespace std;
 
-const int N = 100010;
-int a[N];
-
 int main()
 {
 	int n; cin >> n;
-	for (int i = 1; i <= n; i ++) cin >> a[i];
 
-	int cnt = 0;
-	for (int i = 1; i <= n; i ++) 
-		if (a[i] == 1) cnt ++;
+	int ans = 0;
+	while (n --)
+	{
+		int x; cin >> x;
+		ans ^= x;
+	}
 
-	if (cnt & 1) cout << (((n - cnt) % 2 == 0) ? "No" : "Yes");
-	else cout << (((n - cnt) % 2 == 0) ? "Yes" : "No");
-
+	cout << (ans ? "Yes" : "No");
 	return 0;
 }
