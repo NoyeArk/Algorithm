@@ -12,10 +12,10 @@
 | -------  | --------  | -------- |
 | $n≤30$   | 指数级别   | dfs+剪枝，状态压缩dp|
 | $n≤10^2$  | $O(n^3)$  | floyd，dp，高斯消元|
-| $n≤10^3$ | $O(n^2)$、$O(n²logn)$ | dp，二分，朴素版Dijkstra、朴素版Prim、Bellman-Ford|
+| $n≤10^3$ | $O(n^2)$、 $O(n²logn)$ | dp，二分，朴素版Dijkstra、朴素版Prim、Bellman-Ford|
 | $n≤10^4$  | $O(n∗\sqrt{n})$ | 块状链表、分块、莫队 |
 | $n≤10^5$  | $O(nlogn)$ | 各种sort，线段树、树状数组、set/map、heap、拓扑排序、dijkstra+heap、prim+heap、Kruskal、spfa、求凸包、求半平面交、二分、CDQ分治、整体二分、后缀数组、树链剖分、动态树 |
-| $n≤10^6$  | 常数较小的$O(nlogn)$ | 单调队列、 hash、双指针扫描、BFS、并查集，kmp、AC自动机 |
+| $n≤10^6$  | 常数较小的 $O(nlogn)$ | 单调队列、 hash、双指针扫描、BFS、并查集，kmp、AC自动机 |
 | $n≤10^7$  | $O(n)$ | 双指针扫描、kmp、AC自动机、线性筛素数 |
 | $n≤10^9$  | $O(\sqrt{n})$ | 判断质数 |
 | $n≤10^{18}$  | $O(logn)$ | 最大公约数，快速幂，数位DP |
