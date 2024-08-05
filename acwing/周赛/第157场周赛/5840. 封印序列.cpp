@@ -11,35 +11,36 @@
  */
 
 #include <iostream>
-#include <vector>
-#include <queue>
 using namespace std;
+
+typedef long long LL;
 
 const int N = 100010;
 int a[N], b[N], pre[N];
+LL sum[N], ans[N];
+bool st[N];
+
+int find(int x)
+{
+	return pre[x] = (pre[x] == x ? x : find(pre[x]));
+}
 
 int main()
 {
-	cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
 	int n; cin >> n;
-	for (int i = 1; i <= n; i ++) 
-	{
-		cin >> a[i];
-		pre[i] = pre[i - 1] + a[i];
-	}
+	for (int i = 1; i <= n; i ++) pre[i] = i;
+	for (int i = 1; i <= n; i ++) cin >> a[i];
 	for (int i = 1; i <= n; i ++) cin >> b[i];
 
-	int sum = 0;
-	for (int i = 1; i <= n; i ++) sum += a[i];
-
-	priority_queue<int, vector<int>, greater<int>> heap;
-	heap.push(sum);
-
-	for (int i = 1; i <= n; i ++)
+	for (int i = n; i; i --)
 	{
 		int j = b[i];
-		heap.push(pre[j]), heap.push(pre[])
+		st[j] = true, sum[j] = a[j];
+		if (st[j + 1]) sum[find(j + 1)] += sum[j], pre[j] = find(j + 1);
+		if (st[j - 1]) sum[find(j)] += sum[j - 1], pre[j - 1] = find(j);
+		ans[i - 1] = max(ans[i], sum[find(j)]);
 	}
 
+	for (int i = 1; i <= n; i ++) cout << ans[i] << endl;
 	return 0;
 }

@@ -35,9 +35,22 @@ int main()
 	{
 		if (s[k] != '.')
 		{
-			
+			s[k] ++;
+			if (s[k] < '5') break;
+			if (s[k] <= '9')
+			{
+				if (!m || k < dot) break;
+				s[k] = '0';
+				m --;
+			}
+			else s[k] = '0';
 		}
+		k --;
 	}
+	if (k < 0) s = "1" + s;
+	while (s.back() == '0') s.pop_back();
+	if (s.back() == '.') s.pop_back();
 
+	cout << s;
 	return 0;
 }
