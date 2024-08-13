@@ -27,22 +27,32 @@ stack<char> op;
 
 void eval()
 {
+    auto c = op.top(); op.pop();
+    if (c == '(') return ;
     auto b = num.top(); num.pop();
     auto a = num.top(); num.pop();
-    auto c = op.top(); op.pop();
     LL res = 0;
     if (c == '+') res = a + b;
     else if (c == '-') res = a - b;
     else if (c == '*') res = a * b;
     else if (c == '/') res = a / b;
     else res = pow(a, b);
+    printf("%ld%c%ld=%ld\n", a, c, b, res);
     num.push(res);
+    cout << "栈中数据：" << endl;
+    auto tmp = num;
+    while (tmp.size()) 
+    {
+        cout << tmp.top() << " ";
+        tmp.pop();
+    }
+    cout << endl;
 }
 
 int main()
 {
     unordered_map<char, int> pr{{'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'^', 2}};
-
+    
     string str; cin >> str;
     for (int i = 0; i < str.size(); i ++)
     {
@@ -63,12 +73,25 @@ int main()
         }
         else
         {
-            if (c == '-' && (!i || !isdigit(str[i - 1]))) num.push(0);
             while (op.size() && op.top() != '(' && pr[op.top()] >= pr[c])
                 eval();
+            if (c == '-' && str[i - 1] != ')' && (!i || !isdigit(str[i - 1]))) 
+            {
+                cout << "*************" << endl;
+                num.push(0);
+            }
             op.push(c);
         }
     }
+    
+    auto t = op;
+    while (t.size())
+    {
+        cout << t.top();
+        t.pop();
+    }
+    cout << endl;
+    
     while (op.size() && num.size()) eval();
     cout << num.top();
 
