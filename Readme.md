@@ -11,15 +11,9 @@
 
 ## 2 文件说明
 
-1. [`acwing`](acwing/)：Acwing平台学习
-2. `camp`：计算机保研夏令营机试题目
-3. `codeforces`：codeforces平台学习
-4. `csp`：
-5. `data structure`：数据结构总结
-6. `lanqiao`：
-7. `leetcode`：
-8. `logu`：
-9. `work`：
+1. [acwing](acwing/)：Acwing平台学习
+2. [data structure](data%20structure/)：数据结构总结
+3. `leetcode`：
 
 ## 3 题目数据范围分析
 
