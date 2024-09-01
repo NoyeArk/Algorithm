@@ -13,7 +13,6 @@
 
 1. [acwing](acwing/)：Acwing平台学习
 2. [data structure](data%20structure/)：数据结构总结
-3. `leetcode`：
 
 ## 3 题目数据范围分析
 
