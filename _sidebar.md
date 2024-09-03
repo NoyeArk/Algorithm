@@ -1,2 +1,2 @@
 - [首页](/)
-- [Algorithm](/README.md)
+- [Algorithm](/Readme.md)
