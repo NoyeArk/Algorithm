@@ -1,110 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="icon" href="https://noyeark.github.io/img/favicon.jpg">
+    <meta charset="UTF-8">
+    <title>机考算法学习</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <link rel="icon" href="https://noyeark.github.io/img/favicon.jpg">
 </head>
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: '机考算法学习',
-      repo: 'https://github.com/NoyeArk/Algorithm',
-      // 开启侧边栏
-      loadSidebar: true,
-      auto2top: true,
-      loadNavbar: true,
-      subMaxLevel: 2,
-      // sidebarDisplayLevel: 2,
-      // subMaxLevel: 2,
-      alias: {
-          '/.*/_sidebar.md': '/_sidebar.md'
-      },
-      pagination: {
-          previousText: '上一章节',
-          nextText: '下一章节',
-          crossChapter: true,
-          crossChapterText: true,
-      },
-      // 全文搜索
-      search: {
-        placeholder: '搜索',
-        noData: '找不到结果！',
-      },
-      // 字数统计
-      count:{
-        countable: true,
-        position: 'top',
-        margin: '10px',
-        float: 'right',
-        fontsize:'0.9em',
-        color:'rgb(90,90,90)',
-        language:'chinese',
-        isExpected: true
-    },
-    // 回到顶部
-    scrollToTop: {
-       auto: true,
-       text: '▲',
-       right: 12,
-       bottom: 52,
-       offset: 25
-     },
-    }
-  </script>
-  
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-
-  <!-- latex -->
-  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
-  <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
-  <!-- CDN files for docsify-katex -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-  <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
-
-  <!-- 代码高亮 -->
-  <script src="//unpkg.com/prismjs/components/prism-c.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-cpp.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/matlab.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-  <!-- 下一页 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@latest/dist/docsify-pagination.min.js"></script>
-  <!-- 复制提示 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <!-- 复制到剪贴板 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 全文搜索 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- 字数统计 -->
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-  <!-- 侧边栏折叠 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- 回到顶部功能 -->
-  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
-  <!-- 图片放大 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- 外链 -->
-  <script src="//unpkg.com/docsify/lib/plugins/external-script.js"></script>
-  <!-- github编辑 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
-  <!-- 页脚 -->
-  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
-
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+          name: '机考算法学习',
+          repo: 'https://github.com/NoyeArk/Algorithm',
+          // 开启侧边栏
+          loadSidebar: true,
+          auto2top: true,
+          loadNavbar: true,
+          subMaxLevel: 2,
+          // sidebarDisplayLevel: 2,
+          // subMaxLevel: 2,
+          alias: {
+              '/.*/_sidebar.md': '/_sidebar.md'
+          },
+          pagination: {
+              previousText: '上一章节',
+              nextText: '下一章节',
+              crossChapter: true,
+              crossChapterText: true,
+          },
+          // 全文搜索
+          search: {
+            placeholder: '搜索',
+            noData: '找不到结果！',
+          },
+          // 字数统计
+          count:{
+            countable: true,
+            position: 'top',
+            margin: '10px',
+            float: 'right',
+            fontsize:'0.9em',
+            color:'rgb(90,90,90)',
+            language:'chinese',
+            isExpected: true
+        },
+        // 回到顶部
+        scrollToTop: {
+           auto: true,
+           text: '▲',
+           right: 12,
+           bottom: 52,
+           offset: 25
+         },
+        }
+    </script>
 </body>
 </html>
