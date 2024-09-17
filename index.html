@@ -5,58 +5,36 @@
   <title>机考算法学习</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <link rel="icon" href="http://pic.imeitou.com/uploads/allimg/240703/10-240F3153005.jpg">
+  <style>
+    .katex-display > .katex {
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: '机考算法学习',
-      repo: 'https://github.com/NoyeArk/Algorithm',
-      // 开启侧边栏
       loadSidebar: true,
-      auto2top: true,
-      loadNavbar: true,
       subMaxLevel: 2,
-      // sidebarDisplayLevel: 2,
-      // subMaxLevel: 2,
       alias: {
-          '/.*/_sidebar.md': '/_sidebar.md'
-      },
-      pagination: {
-          previousText: '上一章节',
-          nextText: '下一章节',
-          crossChapter: true,
-          crossChapterText: true,
-      },
-      // 全文搜索
-      search: {
-        placeholder: '搜索',
-        noData: '找不到结果！',
-      },
-      // 字数统计
-      count:{
-        countable: true,
-        position: 'top',
-        margin: '10px',
-        float: 'right',
-        fontsize:'0.9em',
-        color:'rgb(90,90,90)',
-        language:'chinese',
-        isExpected: true
-    },
-    // 回到顶部
-    scrollToTop: {
-       auto: true,
-       text: '🔼',
-       right: 12,
-       bottom: 52,
-       offset: 25
-     }
+        '/.*/_sidebar.md': '/_sidebar.md'
+      }
     }
   </script>
-  
+  <!-- CDN files for docsify-katex -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked@3"></script>
+
+  <!-- CDN files for docsify-katex -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <!-- Put them above docsify.min.js -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/docsify.min.js"></script>
 </body>
 </html>
