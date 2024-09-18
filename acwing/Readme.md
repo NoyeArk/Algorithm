@@ -5,4 +5,4 @@
 |1|[Acwing](Readme.md)|[算法基础课](1-算法基础课/)|进行中| |
 |2|[Acwing](Readme.md)|[蓝桥杯每日一题](2-蓝桥杯每日一题/)|进行中| |
 |3|[Acwing](Readme.md)|[算法竞赛进阶指南](3-算法竞赛进阶指南/)|进行中| |
-|4|[Acwing](Readme.md)|[周赛](周赛)|进行中| |
+|4|[Acwing](Readme.md)|[周赛](周赛/Readme.md)|进行中| |
