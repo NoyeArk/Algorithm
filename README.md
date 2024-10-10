@@ -38,7 +38,7 @@
 |2|[Acwing](acwing/Readme.md)|[蓝桥杯每日一题](acwing/2-蓝桥杯每日一题/)|进行中| |
 |3|[Acwing](acwing/Readme.md)|[算法竞赛进阶指南](acwing/3-算法竞赛进阶指南/)|进行中| |
 |5|[Leetcode](leetcode/)|[Leetcode热题100](leetcode/2-热题100/)|已完成| 2024.07.27 |
-|6|[Leetcode](leetcode/)|[动态规划（基础版）](leetcode/3-动态规划（基础版）/)|进行中| |
+|6|[Leetcode](leetcode/)|[动态规划（基础版）](leetcode/3-动态规划（基础版）/)|已完成| 2024.10.08 |
 |7|[Leetcode](leetcode/)|[「新」动计划·编程入门](leetcode/6-「新」动计划%20·%20编程入门/)|已完成| 2024.07.23 |
 |8|[Leetcode](leetcode/)|[面试经典150题](leetcode/7-面试经典%20150%20题/)|进行中|  |
 |9|[Leetcode](leetcode/)|[119经典题变种挑战](leetcode/8-119经典题变种挑战/)|进行中|  |
