@@ -9,6 +9,7 @@
 |   | 知识点 | 
 | - | ------- |
 |**基础算法**| [双指针](algorithm/双指针.md)、[差分](algorithm/差分.md)、[滑动窗口](algorithm/滑动窗口.md)、[单调栈](algorithm/单调栈.md) |
+| **数据结构**| [线段树](algorithm/线段树.md) |
 
 ## 2 题目数据范围分析
 
