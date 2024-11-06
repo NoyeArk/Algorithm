@@ -1,23 +1,25 @@
-# 机试算法学习
+# Algorithm Learning
 
-记录算法机试学习路线，提高机试学习效率，不断提高机试代码能力。
+Record the learning route of algorithm problem, improve the efficiency of machine testing learning, and continuously enhance the ability of machine testing code.
 
-## 1 知识点
+## 1 Knowledge
 
 ![](algorithm/image/knowledge.png)
 
-|   | 知识点 | 
+| Type | Knowledge | 
 | - | ------- |
-|**基础算法**| [双指针](algorithm/双指针.md)、[差分](algorithm/差分.md)、[滑动窗口](algorithm/滑动窗口.md)、[单调栈](algorithm/单调栈.md) |
-| **数据结构**| [线段树](algorithm/线段树.md) |
+|Basic Algorithm| [double pointer](algorithm/双指针.md)、[difference](algorithm/差分.md)、[sliding window](algorithm/滑动窗口.md)、[monotone stack](algorithm/单调栈.md) |
+| Data Structure | [segment tree](algorithm/线段树.md) |
 
-## 2 题目数据范围分析
+---
+
+## 2 Data Range Analysis
 
 由数据范围反推算法复杂度以及算法内容，一般ACM或者笔试题的时间限制是 1 秒或 2 秒。
 
 在这种情况下，C++代码中的操作次数控制在 $10^7~10^8$ 为最佳。下面给出在不同数据范围下，代码的时间复杂度和算法该如何选择：
 
-| 数据范围  | 时间复杂度 | 常用算法 |
+| Data Range  | Time Complexity | Common Algorithm |
 | -------  | --------  | -------- |
 | $n≤30$   | 指数级别   | dfs+剪枝，状态压缩dp|
 | $n≤10^2$  | $O(n^3)$  | floyd，dp，高斯消元|
@@ -29,19 +31,21 @@
 | $n≤10^9$  | $O(\sqrt{n})$ | 判断质数 |
 | $n≤10^{18}$  | $O(logn)$ | 最大公约数，快速幂，数位DP |
 | $n≤10^{1000}$  | $O((logn)²)$ | 高精度加减乘除 |
-| $n≤10^{100000}$  | $O(logk×loglogk)$ | k表示位数，高精度加减、FFT/NTT |
+| $n≤10^{100000}$  | $O(logk×loglogk)$ | $k$ 表示位数，高精度加减、FFT/NTT |
 
-## 3 学习记录
+---
 
-|序号| 平台 | 题单名称 | 状态 | 完成时间 |
+## 3 Record
+
+| ID | Platform | 题单名称 | State | Complete Time |
 |--| ---- | ------ | ----  | ------ |
-|1|[Acwing](acwing/Readme.md)|[算法基础课](acwing/1-算法基础课/)|进行中| |
-|2|[Acwing](acwing/Readme.md)|[蓝桥杯每日一题](acwing/2-蓝桥杯每日一题/)|进行中| |
-|3|[Acwing](acwing/Readme.md)|[算法竞赛进阶指南](acwing/3-算法竞赛进阶指南/)|进行中| |
-|5|[Leetcode](leetcode/Readme.md)|[Leetcode热题100](leetcode/2-热题100/)|已完成| 2024.07.27 |
-|6|[Leetcode](leetcode/Readme.md)|[动态规划（基础版）](leetcode/3-动态规划（基础版）/)|已完成| 2024.10.08 |
-|7|[Leetcode](leetcode/Readme.md)|[「新」动计划·编程入门](leetcode/6-「新」动计划%20·%20编程入门/)|已完成| 2024.07.23 |
-|8|[Leetcode](leetcode/Readme.md)|[面试经典150题](leetcode/7-面试经典%20150%20题/)|进行中|  |
-|9|[Leetcode](leetcode/Readme.md)|[119经典题变种挑战](leetcode/8-119经典题变种挑战/)|进行中|  |
-|10|[Leetcode](leetcode/Readme.md)|[30天Pandas挑战](leetcode/9-30%20天%20Pandas%20挑战/)|进行中|  |
-|11|[Nowcoder](nowcoder/)|[笔试必刷TOP101](nowcoder/1-笔试必刷TOP101/)|进行中|  |
+|1|[Acwing](acwing/Readme.md)|[算法基础课](acwing/1-算法基础课/)| Ongoing | |
+|2|[Acwing](acwing/Readme.md)|[蓝桥杯每日一题](acwing/2-蓝桥杯每日一题/)| Ongoing | |
+|3|[Acwing](acwing/Readme.md)|[算法竞赛进阶指南](acwing/3-算法竞赛进阶指南/)| Ongoing | |
+|5|[Leetcode](leetcode/Readme.md)|[Leetcode热题100](leetcode/2-热题100/)| Over | 2024.07.27 |
+|6|[Leetcode](leetcode/Readme.md)|[动态规划（基础版）](leetcode/3-动态规划（基础版）/)| Over | 2024.10.08 |
+|7|[Leetcode](leetcode/Readme.md)|[「新」动计划·编程入门](leetcode/6-「新」动计划%20·%20编程入门/)| Over | 2024.07.23 |
+|8|[Leetcode](leetcode/Readme.md)|[面试经典150题](leetcode/7-面试经典%20150%20题/)| Ongoing |  |
+|9|[Leetcode](leetcode/Readme.md)|[119经典题变种挑战](leetcode/8-119经典题变种挑战/)| Ongoing |  |
+|10|[Leetcode](leetcode/Readme.md)|[30天Pandas挑战](leetcode/9-30%20天%20Pandas%20挑战/)| Ongoing |  |
+|11|[Nowcoder](nowcoder/)|[笔试必刷TOP101](nowcoder/1-笔试必刷TOP101/)| Ongoing |  |
