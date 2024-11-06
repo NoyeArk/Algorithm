@@ -15,7 +15,7 @@ Record the learning route of algorithm problem, improve the efficiency of machin
 
 ## 2 Data Range Analysis
 
-由数据范围反推算法复杂度以及算法内容，一般ACM或者笔试题的时间限制是 1 秒或 2 秒。
+Based on the complexity and algorithm content of the data range inverse calculation method, the time limit for ACM or pen test questions is generally 1~2 seconds.
 
 在这种情况下，C++代码中的操作次数控制在 $10^7~10^8$ 为最佳。下面给出在不同数据范围下，代码的时间复杂度和算法该如何选择：
 
