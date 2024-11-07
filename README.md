@@ -8,7 +8,8 @@ Record the learning route of algorithm problem, improve the efficiency of machin
 
 | Type | Knowledge | 
 | - | ------- |
-|Basic Algorithm| [double pointer](algorithm/双指针.md)、[difference](algorithm/差分.md)、[sliding window](algorithm/滑动窗口.md)、[monotone stack](algorithm/单调栈.md) |
+| Array | [dichotomy](algorithm/1-Array/dichotomy.md) |
+| Basic Algorithm | [double pointer](algorithm/双指针.md)、[difference](algorithm/差分.md)、[sliding window](algorithm/滑动窗口.md)、[monotone stack](algorithm/单调栈.md) |
 | Data Structure | [segment tree](algorithm/线段树.md) |
 
 ---
