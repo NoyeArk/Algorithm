@@ -49,4 +49,5 @@ Based on the complexity and algorithm content of the data range inverse calculat
 |8|[Leetcode](leetcode/Readme.md)|[面试经典150题](leetcode/7-面试经典%20150%20题/)| Ongoing |  |
 |9|[Leetcode](leetcode/Readme.md)|[119经典题变种挑战](leetcode/8-119经典题变种挑战/)| Ongoing |  |
 |10|[Leetcode](leetcode/Readme.md)|[30天Pandas挑战](leetcode/9-30%20天%20Pandas%20挑战/)| Ongoing |  |
-|11|[Nowcoder](nowcoder/)|[笔试必刷TOP101](nowcoder/1-笔试必刷TOP101/)| Ongoing |  |
+|11|[Nowcoder](nowcoder/)|[笔试必刷TOP101](nowcoder/笔试必刷TOP101/)| Ongoing |  |
+|12|[Nowcoder](nowcoder/)|[输入输出练习](nowcoder/输入输出练习/)| Ongoing |  |
